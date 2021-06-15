@@ -1,9 +1,10 @@
-const webpack = require('webpack');
 const path = require('path');
+
+const webpack = require('webpack');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } =require('clean-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -38,11 +39,6 @@ module.exports = {
       template: path.resolve(__dirname, './static', 'index.html'),
       inject:'body',
     }),
-    new MiniCssExtractPlugin(),
-    new CopyPlugin({
-      patterns: [
-        path.resolve(__dirname, "static", "favicon.ico"),
-      ],
-    }),
+    new MiniCssExtractPlugin(), 
   ],
 };
