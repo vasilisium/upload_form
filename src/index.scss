@@ -1,4 +1,25 @@
+$bg: #c1c1c1;
+// $grey: #a8abae;
+$grey: #f2eae7;
+// $logoGrey: #a8abae;
+$logoGrey: #fff;
+$red: #dc1c22;
+$dark: #423838;
+$textMain: #000;
+
 * {
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $bg;
+}
+
+@import './Layout/layout.scss';
+@import './Form/Form.scss';

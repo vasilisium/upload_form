@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg28"
+   sodipodi:docname="logo-icon1.svg"
+   viewBox="0 0 33.600001 37.000001"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs32" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview30"
+     showgrid="false"
+     inkscape:zoom="9.3666667"
+     inkscape:cx="51.083737"
+     inkscape:cy="26.461308"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg28" />
+  <g
+     id="g26"
+     transform="matrix(1.0000054,0,0,1,-60.148469,-44.71032)">
+    <g
+       id="g24">
+      <circle
+         style="fill:#dc1c22;fill-opacity:1;fill-rule:evenodd"
+         cx="78.844505"
+         cy="48.91032"
+         r="4"
+         id="circle2" />
+      <circle
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="89.440598"
+         cy="52.664497"
+         r="3.6406727"
+         id="circle4" />
+      <circle
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="68.61319"
+         cy="52.485291"
+         r="3.3673573"
+         id="circle6" />
+      <circle
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="63.036003"
+         cy="68.277458"
+         r="2.4271147"
+         id="circle8" />
+      <ellipse
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="66.675591"
+         cy="74.860878"
+         rx="2.0873194"
+         ry="2.0873196"
+         id="ellipse10" />
+      <circle
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         id="path24-9-8-1"
+         cx="63.234451"
+         cy="60.101521"
+         r="2.8863056" />
+      <ellipse
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="72.626297"
+         cy="78.903954"
+         rx="1.7475228"
+         ry="1.7475227"
+         id="ellipse13" />
+      <ellipse
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="78.844505"
+         cy="80.220261"
+         rx="1.4562689"
+         ry="1.4562688"
+         id="ellipse15" />
+      <ellipse
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="84.83606"
+         cy="79.091415"
+         rx="1.2135576"
+         ry="1.2135574"
+         id="ellipse17" />
+      <ellipse
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="89.413551"
+         cy="76.757034"
+         rx="0.97084606"
+         ry="0.97084588"
+         id="ellipse19" />
+      <ellipse
+         style="fill:#a8abae;fill-opacity:1;fill-rule:evenodd"
+         cx="92.692749"
+         cy="73.449348"
+         rx="0.82521909"
+         ry="0.82521898"
+         id="ellipse21" />
+      <path
+         style="fill:#dc1c22;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:miter"
+         d="M 85.517105,72.807661 H 72.760444 v -2.2151 h 1.795387 c 0.902034,0 1.415533,-0.654172 1.415533,-1.22212 v -8.5399 c 0,-0.755953 -0.613191,-1.36038 -1.321068,-1.36038 l -1.889852,3e-6 v -2.151419 l 9.94428,-1.572994 v 13.62469 c 0,0.606823 0.639256,1.22212 1.217829,1.22212 h 1.594552 z"
+         id="path1180" />
+    </g>
+  </g>
+</svg>

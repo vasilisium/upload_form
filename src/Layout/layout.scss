@@ -1,0 +1,82 @@
+.form-wrapper {
+  // margin: 50px 0 0 0;
+  // padding-top: 50px;
+  background-color: $grey;
+  box-shadow: black 0 0 10px 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  
+  .logo{
+    padding-bottom: 5px;
+    background-color: $dark;
+    display: grid;
+    grid-template: auto auto / auto 1fr;
+
+    .logo-img {
+      padding: 10px;
+      margin: auto;
+
+      width: 50px;
+      height: 50px;
+
+      // grid-row-start: 1;
+      // grid-row-end: 3;
+    }
+    .logo-label {
+      margin: auto 0 auto 0;
+      display: flex;
+      flex-direction: row;
+      font-size: 25px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
+      .labelText{
+        margin: auto 0;
+      }
+
+      .labelText1{
+        color: $logoGrey;
+      }
+
+      .labelText2{
+        color: $red;
+        font-weight: 700;
+      }
+      
+      .department1{
+        padding: 0 0 0 10px;
+        font-weight: 600;
+        // color: $red;
+        // color: $logoGrey;
+        // color: #3a54ea;
+        // font-size: 40px;
+      }
+
+      .animatedUA {
+        text-align: center;
+        
+        background-image: linear-gradient(to right, rgb(119, 142, 248) 20%, #FF0 40%, #FF0 60%, rgb(119, 142, 248) 80%);
+        background-size: 200% auto;
+        
+        color: transparent;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        
+        animation: shine 6s cubic-bezier(0.54, 0.01, 0.41, 0.96) infinite;
+        @keyframes shine {
+          to {
+            background-position: 200% center;
+          }
+        }
+      }
+    }
+  }
+
+  .form-body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: $textMain;
+    // height: 500px;
+    padding-bottom: 50px;
+  }
+}

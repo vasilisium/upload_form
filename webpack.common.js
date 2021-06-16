@@ -5,6 +5,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } =require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -26,7 +28,11 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ]
-      }
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
     ]
   },
   resolve: {
@@ -36,9 +42,17 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './static', 'index.html'),
+      template: path.resolve(__dirname, './html', 'index.html'),
       inject:'body',
     }),
-    new MiniCssExtractPlugin(), 
+    new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "assets/favicon.ico"),
+          to: path.resolve(__dirname, './dist/assets'),
+        },
+      ],
+    }),
   ],
 };
