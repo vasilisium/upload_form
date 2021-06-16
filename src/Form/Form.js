@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -28,6 +28,16 @@ const useStyles = makeStyles({
   
 });
 
+function generatePassword() {
+  var chars = "abcdefghijklmnopqrstuvwxyz!@ABCDEFGHIJKLMNOP1234567890";
+  var pass = "";
+  for (var x = 0; x < 6; x++) {
+    var i = Math.floor(Math.random() * chars.length);
+    pass += chars.charAt(i);
+  }
+  return pass;
+}
+
 export default (props) => {
   const styles = useStyles();
 
@@ -35,7 +45,11 @@ export default (props) => {
   date.setDate(date.getDate() + 14)
   const [selectedDate, setSelectedDate] = React.useState(date);
 
-  const myInput = useRef();
+  const [file, setFile] = React.useState();
+
+  const [password, setPassword] = React.useState('');
+
+  const myInput = React.useRef();
 
   return (
   <>
@@ -50,6 +64,7 @@ export default (props) => {
     <input id="myInput" type="file" 
       ref={myInput} style={{ display: 'none' }} 
       accept=".zip, .7zip, .rar, .csv, .xlsx"
+      onChange = {(e)=> setFile(e.target.files[0]) }
     />
     <Button color="primary" variant="contained"
       className={styles.spaceRight}
@@ -57,7 +72,9 @@ export default (props) => {
     >
       Обрати
     </Button>
-    <span id='fileName'/>
+    <span id='fileName'>
+      {'' || file?.name}
+    </span>
 
 
     <Typography variant="h6">
@@ -75,11 +92,13 @@ export default (props) => {
       className={styles.spacer}
       id="tfNewPass"
       placeholder="Пароль доступу"
+      value = {password}
     />
     <Button
       id="btnNewPass"
       color="primary" 
       variant="contained"
+      onClick = { () => setPassword(generatePassword()) }
     >
       Згенерувати новий
     </Button>
