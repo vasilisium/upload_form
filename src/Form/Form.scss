@@ -1,3 +1,8 @@
-.MuiPopover-root .MuiButtonBase-root.MuiIconButton-root.MuiPickersCalendarHeader-iconButton{
+.MuiPopover-root .MuiButtonBase-root.MuiIconButton-root.MuiPickersCalendarHeader-iconButton {
     background-color: $grey;
-  }
+}
+
+.MuiSnackbarContent-root {
+  background-color: green;
+  color: aliceblue;
+}
