@@ -1,0 +1,41 @@
+// debug config for running project under vscode debugger
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "trace": true,
+            "name": "Chrome Debug",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8000/",
+            "webRoot": "${workspaceRoot}/src/",  // folder containing webpack.config.js
+            "userDataDir": "${workspaceRoot}/.vscode/chrome",
+            "sourceMaps": true,
+            "disableNetworkCache": true,
+            // we have multiple js source folders, so some source maps are still generated with webpack protocol links. Don't know why?
+            "sourceMapPathOverrides": {  // if you override this, you MUST provide all defaults again
+                "webpack:///./~/*": "${webRoot}/node_modules/*",  // a default
+                "webpack:///./*":   "${webRoot}/js-src/*",        // unsure how/why webpack generates ./links.js
+                "webpack:///../*": "${webRoot}/js-src/*",         // unsure how/why webpack generates ../links.js
+                "webpack:///*":     "*"                           // a default, catch everything else
+            }
+        }
+    ]
+}
+webpack.config.js
+// source: ./js-src/<item>
+// target: ./static/js-build/<item>
+// Do not use uglify plugin when debugging, did not try to get source maps working with uglify
+
+{
+    resolve: {
+        root: [  // older webpack config
+            path.join(__dirname, '/js-src'),  // source at ./js-src/
+        ]
+    devtool: "source-map", // many options, but this one works best for me: https://webpack.js.org/configuration/devtool/
+    output: {
+        filename: '[name].js',
+        path: path.join(__dirname, '/static/js-build'),  // compile to ./static/js-build
+        devtoolModuleFilenameTemplate: 'file:///[absolute-resource-path]'  // map to source with absolute file path not webpack:// protocol
+    }
+}
